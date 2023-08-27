@@ -39,13 +39,8 @@ class LinkedQueue(Queue[T]):
         """ Appends an element to the rear of the queue.
             :complexity: O(1)
         """
-        new_node = Node(item)  # create new node
-        if self.is_empty():
-            self.front = new_node  # move head
-        else:
-            self.rear.link = new_node  # link it in
-        self.rear = new_node  # move rear to new node
-        self.length += 1
+        # add your implementation here
+        return NotImplementedError 
 
     def serve(self) -> T:
         """ Serves the element at the front of the queue.
@@ -53,12 +48,5 @@ class LinkedQueue(Queue[T]):
             :complexity: O(1)
             :raises Exception: if the queue is empty
         """
-        if not self.is_empty():
-            item = self.front.item  # store the item to serve
-        self.front = self.front.link  # move front
-        self.length -= 1
-        if self.is_empty():  # if now empty
-            self.rear = None  # move rear
-            return item
-        else:
-            raise ValueError("Queue is empty")
+        # add your implementation here
+        return NotImplementedError 
